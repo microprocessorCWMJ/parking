@@ -64,23 +64,6 @@ int Frequency;
 
 bool park_flag_Red, park_flag_Green, park_flag_Blue; //Total three colors
 
-void setup() {
-  pinMode(S2, OUTPUT);    
-  pinMode(S3, OUTPUT);      
-  pinMode(sensorOut1, INPUT); 
-  pinMode(S22, OUTPUT);    
-  pinMode(S33, OUTPUT);      
-  pinMode(sensorOut2, INPUT); 
-  Serial.begin(115200);      
-  delay(1000);            
-}
-
-void loop() {
-  if(!driving_mode){
-    detect_parking_line();
-  }
-}
-
 int getRed(int x) {
   if(x==1){
     digitalWrite(S2,LOW);
@@ -188,3 +171,19 @@ void detect_parking_line(){
   }
 }
 
+void setup() {
+  pinMode(S2, OUTPUT);    
+  pinMode(S3, OUTPUT);      
+  pinMode(sensorOut1, INPUT); 
+  pinMode(S22, OUTPUT);    
+  pinMode(S33, OUTPUT);      
+  pinMode(sensorOut2, INPUT); 
+  Serial.begin(115200);      
+  delay(100);            
+}
+
+void loop() {
+  if(!driving_mode){
+    detect_parking_line();
+  }
+}

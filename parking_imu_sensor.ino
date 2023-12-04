@@ -86,8 +86,8 @@ void detect_tilted_parking(){
 
 // I2C 통신을 통해 가속도와 자이로 값을 불러오기 때문에 SCL, SDA pin만을 사용한다.
 void setup() {
-  Serial.begin(9600);
-  delay(200);
+  Serial.begin(115200);
+  delay(100);
 }
 
 void loop() {

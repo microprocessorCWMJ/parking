@@ -194,7 +194,7 @@ void measureAngle_for_parking(){
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(LeftFrontpinTrig, OUTPUT);
   pinMode(LeftFrontpinEcho, INPUT);
   pinMode(LeftBehindpinTrig, OUTPUT);
@@ -204,6 +204,7 @@ void setup() {
   pinMode(RightFrontpinEcho, INPUT);
   pinMode(RightBehindpinTrig, OUTPUT);
   pinMode(RightBehindpinEcho, INPUT);
+  delay(100);
 }
 
 void loop() {
