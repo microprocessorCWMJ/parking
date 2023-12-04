@@ -23,9 +23,6 @@
 #include <Wire.h>
 
 const int MPU_ADDR = 0x68;  // I2C통신을 위한 MPU6050의 주소
-//int16_t AcX, AcY, AcZ, Tmp, GyX, GyY, GyZ;   // 가속도(Acceleration)와 자이로(Gyro)
-int16_t AcX, AcY, AcZ;
-double angleAcY;
 const double RADIAN_TO_DEGREE = 180 / 3.14159;
 
 // length of kickboard (It needs to be updated)
@@ -53,6 +50,9 @@ bool parking_complete = false;
 
 class parking{
   private:
+    int16_t AcX, AcY, AcZ;
+    double angleAcY;
+    
     int R_Min = 5; 
     int R_Max = 25; 
     int G_Min = 4; 
