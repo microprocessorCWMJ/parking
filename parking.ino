@@ -29,7 +29,7 @@ double angleAcY;
 const double RADIAN_TO_DEGREE = 180 / 3.14159;
 
 // length of kickboard (It needs to be updated)
-static double kickboard_length_cm = 3.5;
+const double kickboard_length_cm = 3.5;
 
 //----------------------------------------------------For Driving Mode--------------------------------------------------//
 // If users change the button to park, driving mode must be false.
