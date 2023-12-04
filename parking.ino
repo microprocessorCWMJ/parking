@@ -468,6 +468,7 @@ void loop() {
       // if(주차 버튼을 눌러준 경우) { Serial.println("주차 완료") } 가 되도록 수정할 예정
       Serial.println("주차가 완료되었습니다.");
       parking_complete = true;
+      delay(30000);
     }
 
     else{
